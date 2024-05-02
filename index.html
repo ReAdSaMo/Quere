@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quera</title>
+    <link rel="shortcut icon" href="./images/question-mark.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rochester&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- start header banner -->
+    <header class="banner">
+        <p class="scroll"><i class="fa fa-angle-double-down" style="font-size:42px;color:#594db1"></i></p>
+        <!-- start nav -->
+        <nav>
+            <!-- <h2 class="logo"><a href="#"> <span>Q</span>uera</a></h2> -->
+            <h2 class="logo"><img src="images/logo.svg" alt="logo"></h2>
+            <ul class="pages">
+                <li><a href="index.html" class="active">home</a></li>
+                <li><a class="switch" href="html/generate.html">generate</a></li>
+                <li><a href="html/about.html">about</a></li>
+
+
+            </ul>
+            <ul class="menue">
+                <li class="bar">
+                    <i class="fa fa-bars" style="font-size:30px;color:#332885"></i>
+
+                </li>
+                <li class="close" style="font-size:25px;color:#332885">
+
+                    X
+                </li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+        <!-- intro section -->
+
+        <section class="index">
+            <h1>Generate MCQs</h1>
+            <p>Welcome here, we are always working to help you and save your time and effort in the best way by
+                generating
+                MCQs from text easily.</p>
+            <button type="button" onclick="window.location.href='html/generate.html'">Start Generate</button>
+        </section>
+        <aside>
+
+            <img src="images/headerImg.png" alt="header image" class="main-image">
+        </aside>
+    </header>
+    <!-- end header -->
+    <main class="index">
+
+        <h2>How it works</h2>
+        <video controls>
+            <source src="how_work.mp4" type="video/mp4">
+            <!-- <source src="how work.mp4" type="video/ogg"> -->
+            Your browser does not support HTML video.
+        </video>
+    </main>
+    <!-- js scripts  -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // scroling
+            const scrollBottom = document.querySelector(".scroll");
+            window.onscroll = function () {
+                // console.log(this.scrollY)
+
+                this.scrollY >= 250 ? scrollBottom.style.display = "none" : scrollBottom.style.display = "block";
+            }
+            scrollBottom.onclick = function () {
+                console.log('ok');
+                window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+            }
+
+        })
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
